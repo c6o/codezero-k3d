@@ -1,6 +1,6 @@
 # Codezero - K3D - MetalLB
 
-Setting up a local k3d cluster, adding MetalLB and using Codezero from the host.
+This is the process for setting up a local k3d cluster, adding MetalLB and using Codezero from the local host.
 
 ## Create K3D Cluster
 
@@ -11,7 +11,7 @@ k3d cluster create cz-local --api-port 6550 \
 --k3s-arg "--disable=traefik@server:0" \
 --agents 2
 ```
-Note: need to expose the codezero ports, 8800 and 8900, to the host machine.
+Note: The above command exposes the codezero ports, 8800 and 8900, to the host machine.
 
 ## Install and Configure MetalLB
 
@@ -19,20 +19,22 @@ Note: need to expose the codezero ports, 8800 and 8900, to the host machine.
 kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.14.5/config/manifests/metallb-native.yaml
 ```
 
-Add IP addresses to the loopback device
+Run "ips.sh" script to add IP addresses (127.10.0.100 through 127.10.0.109) to the loopback device
 
 ```
 sudo ./ips.sh
 ```
 
-Add address to metallb
+Run the following to add IP addresses (127.10.0.100 through 127.10.0.109) to metallb
 
 ```
 kubectl apply -f metallb.yaml
 ```
 
-## Install codezero
+## Install Codezero
 
+Visit the Codezero HUB and follow the directions on screen.  Detailed instructions are here: https://docs.codezero.io/guides/teamspace-setup. Use the k3d cluster you just created for the install.
 ```
 hub.codezero.io
 ```
+If you have any further questions - please connect via Discord: https://discord.gg/wx3JkVjTPy, or support@codezero.io or your dedicated Slack Connect channel if you're an Enterprise Customer.
