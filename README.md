@@ -31,7 +31,7 @@ Run the following to add IP addresses (127.10.0.100 through 127.10.0.109) to met
 kubectl apply -f metallb.yaml
 ```
 
-## Install Ccodezero
+## Install Codezero
 
 Visit the Codezero HUB and follow the directions on screen.  Detailed instructions are here: https://docs.codezero.io/guides/teamspace-setup. Use the k3d cluster you just created for the install.
 ```
