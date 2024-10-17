@@ -19,6 +19,12 @@ Note: The above command exposes the codezero ports, 8800 and 8900, to the host m
 kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.14.5/config/manifests/metallb-native.yaml
 ```
 
+Wait for metallb to be running
+
+```
+kubectl pods -n metallb-system
+```
+
 Run "ips.sh" script to add IP addresses (127.10.0.100 through 127.10.0.109) to the loopback device
 
 ```
