@@ -72,7 +72,7 @@ hub.codezero.io
 
 Consume the nginx service in the metallb-test namespace.  
 
-![Codezero Service Catalog](assets/servicecatalog.pn "Service Catalog")
+![Codezero Service Catalog](assets/servicecatalog.png "Service Catalog")
 
 Then access it via curl:
 
