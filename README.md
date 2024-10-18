@@ -1,6 +1,7 @@
 # Codezero - K3D - MetalLB
 
 This is the process for setting up a local k3d cluster, adding MetalLB and using Codezero from the local host.
+
 NOTE: This will only be useful for solo, local development. Collaboration via a Codezero Teamspace is not possible with a locally running k3d cluster.
 
 ## Create K3D Cluster
